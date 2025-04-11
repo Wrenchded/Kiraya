@@ -1,0 +1,145 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* This class should match your actual card */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+    animation: fadeIn 0.8s ease-in-out;
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+label {
+    color: #f0f0f0;
+    font-weight: 500;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: inset 0 0 5px rgba(255,255,255,0.1);
+}
+
+input:focus, textarea:focus {
+    background: rgba(255, 255, 255, 0.25);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #004aad, #00c6ff);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0px 4px 12px rgba(0, 74, 173, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #003b8b, #00aaff);
+    box-shadow: 0px 6px 14px rgba(0, 74, 173, 0.5);
+}
+
+/* Success message */
+.alert-success {
+    background-color: rgba(40, 167, 69, 0.2);
+    color: #d4edda;
+    border: 1px solid rgba(40, 167, 69, 0.5);
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.alert-success {
+    background: rgba(0, 255, 135, 0.15);
+    border: 1px solid rgba(0, 255, 135, 0.3);
+    color: #00ff87;
+    border-radius: 10px;
+    padding: 15px;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(6px);
+    animation: fadeInSuccess 0.8s ease-in-out;
+}
+
+@keyframes fadeInSuccess {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .glass-card {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    input, textarea {
+        font-size: 15px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
